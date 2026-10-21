@@ -1,0 +1,28 @@
+1: whois facebook.com
+
+
+Used to look up domain registration details.
+Shows information like domain owner, registrar, creation/expiry dates, and contact info.
+Helpful for checking domain availability or ownership
+
+
+
+2: dig google.com
+Queries DNS servers for information about a domain.
+Can display IP addresses, mail servers, and other DNS records.
+Useful for troubleshooting DNS issues.
+
+
+
+3: nslookup instagram.com
+
+Another tool to query DNS records.
+Simpler than dig, often used for quick lookups.
+Can check if a domain resolves correctly to an IP address.
+
+
+
+4: tracerroute google.com
+Shows the path packets take from your computer to a destination.
+Lists each hop (router) along the way and the time taken.
+Useful for diagnosing network latency or routing problems.

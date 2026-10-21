@@ -1,0 +1,19 @@
+1: sudo apt install nmap
+2: nmap -sp 10.117.231.0/24
+
+3: sudo nmap -sF 10.0.0.24 (Fin Scan) - TCP handshark and scan half-open scan
+
+4:sudo nmap -sV 10.0.0.245 (Version Detection) - check open port
+
+5:sudo nmap -sO 10.0.0.20 (IP scan)
+
+6: sudo namp -O 10.0.0.250
+
+7: sudo nmap -p 10.0.0.245 (only scan specified ports)
+
+8:sudo nmap --top 21 10.0.0.245 (top port scan) check most common port rather than 65,535 ports
+
+9:sudo nmap --iflist 21 10.0.0.245 - uses prints local sys network interface and routing table information , netmask ans status
+
+
+
