@@ -1,0 +1,19 @@
+p = 23
+g=5
+
+# private key
+a=6
+b=15
+
+#public key
+A=pow(g,a,P)
+B=pow(g,b,P)
+
+#shared secret key
+alice_shared_key=pow(B,a,P)
+bob_shared_key=pow(A,b,p)
+
+print("Alice's Public Key:",A)
+print("Bob's Public Key:",B)
+print("Alice's Shared Secret:", alice_shared_key)
+print("Bob Shared Secret:",bob_shared_key)
