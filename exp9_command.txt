@@ -1,5 +1,0 @@
-Command
-1: whois facebook.com
-2: dig google.com
-3: nslookup instagram.com
-4: traceroute google.com
