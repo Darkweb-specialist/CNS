@@ -1,0 +1,53 @@
+
+import math
+
+print("========================================")
+print("RSA Cryptosystem with Digital Signature")
+print("Name: Simran")
+print("========================================")
+
+p = 61
+q = 53
+n = p * q
+phi = (p - 1) * (q - 1)
+
+e = 17
+d = pow(e, -1, phi)
+
+print("\n--- Key Generation ---")
+print("Public Key (e, n) =", (e, n))
+print("Private Key (d, n) =", (d, n))
+
+message = 'Hello'
+
+print("\n--- Sender Side (Simran) ---")
+print("Original Message =", message)
+
+message_integers = [ord(char) for char in message]
+
+ciphertext = [pow(M, e, n) for M in message_integers]
+print("Encrypted Ciphertext =", ciphertext)
+
+signature = [pow(M, d, n) for M in message_integers]
+print("Digital Signature Created =", signature)
+
+print("\n--- Receiver Side ---")
+
+decrypted_integers = [pow(C, d, n) for C in ciphertext]
+decrypted_message = "".join(
+    [chr(num) for num in decrypted_integers]
+)
+print("Decrypted Message =", decrypted_message)
+
+verified_integers = [pow(S, e, n) for S in signature]
+verified_message = "".join(
+    [chr(num) for num in verified_integers]
+)
+print("Decrypted Signature =", verified_message)
+
+if decrypted_message == verified_message:
+    print("\nSUCCESS: The signature is VALID. "
+          "The message is authentic and untampered!")
+else:
+    print("\nWARNING: Signature INVALID. "
+          "The message or signature was altered!")
